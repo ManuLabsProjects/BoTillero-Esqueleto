@@ -8,7 +8,7 @@ Este proyecto utiliza `whatsapp-web.js` y ha sido estructurado siguiendo las mej
 
 1. **Clona el repositorio:**
    \`\`\`bash
-   git clone https://github.com/Duend3Manu/Botillero-Esqueleto.git
+   git clone https://github.com/ManuLabsProjects/Botillero-Esqueleto.git
    cd Botillero-Esqueleto
    \`\`\`
 2. **Instala las dependencias:**
