@@ -1,35 +1,76 @@
-# 🤖 Botillero-Esqueleto
+🤖 Botillero-Esqueleto
+📖 Tabla de Contenidos
+Sobre el Proyecto
 
-Bienvenido al **Boilerplate Oficial de ManuLabs** para la creación de bots de WhatsApp modulares y seguros. 
+Características
 
-Este proyecto utiliza `whatsapp-web.js` y ha sido estructurado siguiendo las mejores prácticas recomendadas por la comunidad de GitHub para evitar bloqueos, gestionar la memoria eficientemente y mantener el código escalable.
+Requisitos Previos
 
-## 🚀 Inicio Rápido
+Instalación
 
-1. **Clona el repositorio:**
-   \`\`\`bash
-   git clone https://github.com/ManuLabsProjects/Botillero-Esqueleto.git
-   cd Botillero-Esqueleto
-   \`\`\`
-2. **Instala las dependencias:**
-   \`\`\`bash
-   npm install
-   \`\`\`
-3. **Configura el entorno:**
-   Renombra el archivo \`.env.example\` a \`.env\` y configura tu API Key de Gemini (opcional) y el prefijo de tus comandos.
-4. **Enciende el Bot:**
-   \`\`\`bash
-   npm start
-   \`\`\`
-   Escanea el código QR que aparecerá en tu terminal con tu WhatsApp.
+Arquitectura
 
-## 🛡️ Prevención de Baneos (Best Practices)
-Basado en los reportes recientes de la comunidad de `whatsapp-web.js`, este esqueleto promueve:
-- **Uso de `LocalAuth`:** Para evitar autenticaciones masivas.
-- **Simulación Humana:** Los comandos de ejemplo (ver `src/commands/ping.js`) integran `chat.sendStateTyping()` y retrasos (`setTimeout`) controlados. Un bot que responde en milisegundos es un bot baneado.
+Prevención de Baneos
 
-## 📂 Arquitectura Modular
-No metas todos tus `if/else` en el `index.js`. Si quieres crear un comando nuevo (ej. `!stock`), simplemente crea un archivo `stock.js` dentro de la carpeta `src/commands/` copiando la estructura de `ping.js`. ¡El *Command Handler* lo detectará automáticamente!
+Colaboración y Licencia
+
+📌 Sobre el Proyecto
+Botillero-Esqueleto es un entorno base optimizado para desarrollar bots de WhatsApp utilizando whatsapp-web.js. A diferencia de otros repositorios, este esqueleto integra de forma nativa persistencia de datos (SQLite) y motores de IA (Gemini), eliminando la latencia de servicios externos y permitiendo un despliegue rápido.
+
+✨ Características
+Modular: Sistema de comandos desacoplado; agrega funciones sin tocar el núcleo.
+
+Inteligente: Integración nativa con Google Gemini v1.5 Flash.
+
+Persistente: Base de datos better-sqlite3 para contadores y estadísticas instantáneas.
+
+Seguro: Configuración de Puppeteer optimizada para evitar crasheos en entornos de servidor.
+
+🚀 Instalación
+Bash
+# 1. Clonar el repositorio
+git clone https://github.com/ManuLabsProjects/BoTillero-Esqueleto.git
+
+# 2. Instalar dependencias
+cd Botillero-Esqueleto
+npm install
+
+# 3. Configurar variables de entorno
+cp .env.example .env
+# Edita el archivo .env con tu GEMINI_API_KEY
+
+# 4. Iniciar
+npm start
+🏗 Arquitectura
+El proyecto sigue una estructura limpia para separar lógica de comandos y servicios:
+
+Plaintext
+src/
+├── commands/      # Lógica de los comandos (!ping, !sticker, !stats)
+├── handlers/      # Enrutador inteligente de mensajes
+└── services/      # Lógica de Base de datos e IA
+index.js           # Punto de entrada
+
+🛡️ Prevención de Baneos
+Meta penaliza comportamientos no humanos. Este esqueleto implementa:
+
+chat.sendStateTyping(): Simula el estado de "escribiendo...".
+
+Pausas aleatorias: Retrasos controlados antes de responder.
+
+Sesión persistente: LocalAuth para reutilizar autenticación y evitar escaneos QR constantes.
+
+💡 Cómo Colaborar
+Si quieres mejorar el código, corregir algún comando del Botillero o añadir nuevas funciones a la web, ¡eres bienvenido!
+
+Haz un Fork del proyecto.
+
+Crea una rama para tus cambios.
+
+Envía un Pull Request.
+
+📜 Filosofía Open Source
+Todo el código en este repositorio está licenciado bajo la Licencia MIT. Creemos firmemente en el aprendizaje libre: aquí no se lucra, se enseña. Puedes usar, modificar y distribuir cualquier parte de estos proyectos para tus propias iniciativas.
 
 ---
 *Desarrollado con 💻 por Duende Manu para la comunidad Open Source.*
