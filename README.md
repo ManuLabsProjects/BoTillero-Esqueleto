@@ -1,18 +1,4 @@
-🤖 Botillero-Esqueleto
-📖 Tabla de Contenidos
-Sobre el Proyecto
-
-Características
-
-Requisitos Previos
-
-Instalación
-
-Arquitectura
-
-Prevención de Baneos
-
-Colaboración y Licencia
+🤖 Botillero-Esqueleto... aquí no se lucra, se enseña
 
 📌 Sobre el Proyecto
 Botillero-Esqueleto es un entorno base optimizado para desarrollar bots de WhatsApp utilizando whatsapp-web.js. A diferencia de otros repositorios, este esqueleto integra de forma nativa persistencia de datos (SQLite) y motores de IA (Gemini), eliminando la latencia de servicios externos y permitiendo un despliegue rápido.
@@ -52,6 +38,7 @@ src/
 index.js           # Punto de entrada
 
 🛡️ Prevención de Baneos
+
 Meta penaliza comportamientos no humanos. Este esqueleto implementa:
 
 chat.sendStateTyping(): Simula el estado de "escribiendo...".
@@ -60,23 +47,6 @@ Pausas aleatorias: Retrasos controlados antes de responder.
 
 Sesión persistente: LocalAuth para reutilizar autenticación y evitar escaneos QR constantes.
 
-💡 Cómo Colaborar
-Si quieres mejorar el código, corregir algún comando del Botillero o añadir nuevas funciones a la web, ¡eres bienvenido!
-
-Haz un Fork del proyecto.
-
-Crea una rama para tus cambios.
-
-Envía un Pull Request.
-
-📜 Filosofía Open Source
-Todo el código en este repositorio está licenciado bajo la Licencia MIT. Creemos firmemente en el aprendizaje libre: aquí no se lucra, se enseña. Puedes usar, modificar y distribuir cualquier parte de estos proyectos para tus propias iniciativas.
-
----
-*Desarrollado con 💻 por Duende Manu para la comunidad Open Source.*
-*Licencia MIT.*
-
----
 
 ## 📜 Filosofía Open Source
 Todo el código en este repositorio está licenciado bajo la **Licencia MIT**.
@@ -90,4 +60,4 @@ Si quieres mejorar el código, corregir algún comando del Botillero o añadir n
 2. Crea una rama para tus cambios.
 3. Envía un *Pull Request*.
 
-*Desarrollado con neón, código y café por Duende Manu.*
+*Desarrollado con código y café por Duende Manu.* ☕
